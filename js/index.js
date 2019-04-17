@@ -1,12 +1,13 @@
 function hazMagia() {
 	//Esta función se llama mediante el evento del DOM onload()
 	const LIMITE = 100;
-	let ctrlSalida = document.getElementId("resultado");
+	//error en getElementID missing By
+	let ctrlSalida = document.getElementById("resultado");
 	arrFibonacci = fibonacci_series(LIMITE);
 	for (let i = 0; i < arrFibonacci.length; i++) {
-		ctrlSalida.innerHTML += losNumeros[i] + ", ";
+		ctrlSalida.innerHTML += arrFibonacci[i] + ", ";
 	}
-	ctrlsalida.innerHTML += "<br>Terminé!";
+	ctrlSalida.innerHTML += "<br>Terminé!" + ", ";
 }
 
 /** La siguiente es una función recursiva, es decir, que se llama a sí misma...
